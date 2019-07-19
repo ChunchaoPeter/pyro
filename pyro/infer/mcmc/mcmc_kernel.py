@@ -1,9 +1,9 @@
 from __future__ import absolute_import, division, print_function
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 
-class MCMCKernel(object, metaclass=ABCMeta):
+class MCMCKernel(ABC):
 
     def setup(self, warmup_steps, *args, **kwargs):
         r"""

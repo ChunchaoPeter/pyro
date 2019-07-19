@@ -1,10 +1,10 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 import torch
 from pyro.distributions.util import eye_like
 
 
-class Measurement(object, metaclass=ABCMeta):
+class Measurement(ABC):
     '''
     Gaussian measurement interface.
 

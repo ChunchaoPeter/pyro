@@ -1,7 +1,7 @@
 from __future__ import absolute_import, division, print_function
 
 import weakref
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 import torch
 
@@ -10,7 +10,7 @@ from pyro.ops.einsum.adjoint import SAMPLE_SYMBOL, Backward
 from pyro.util import ignore_jit_warnings
 
 
-class Ring(object, metaclass=ABCMeta):
+class Ring(ABC):
     """
     Abstract tensor ring class.
 

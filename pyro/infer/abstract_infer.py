@@ -2,7 +2,7 @@ from __future__ import absolute_import, division, print_function
 
 import numbers
 import warnings
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 from collections import OrderedDict, defaultdict
 
 import torch
@@ -158,7 +158,7 @@ class Marginals(object):
         return self._marginals
 
 
-class TracePosterior(object, metaclass=ABCMeta):
+class TracePosterior(ABC):
     """
     Abstract TracePosterior object from which posterior inference algorithms inherit.
     When run, collects a bag of execution traces from the approximate posterior.

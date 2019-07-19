@@ -1,11 +1,11 @@
 from __future__ import absolute_import, division, print_function
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 from pyro.distributions.score_parts import ScoreParts
 
 
-class Distribution(object, metaclass=ABCMeta):
+class Distribution(ABC):
     """
     Base class for parameterized probability distributions.
 

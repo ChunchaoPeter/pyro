@@ -1,7 +1,7 @@
 from __future__ import absolute_import, division, print_function
 
 import weakref
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 import torch
 
@@ -11,7 +11,7 @@ from pyro.util import jit_iter
 SAMPLE_SYMBOL = " "  # must be unique and precede alphanumeric characters
 
 
-class Backward(object, metaclass=ABCMeta):
+class Backward(ABC):
     is_leaf = False
 
     def __call__(self):
